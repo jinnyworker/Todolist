@@ -1,0 +1,42 @@
+{
+  "name": "todolist",
+  "productName": "TODOLIST",
+  "version": "0.1.0",
+  "description": "개인용 할 일 데스크톱 앱",
+  "author": "jinnyworker",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jinnyworker/Todolist.git"
+  },
+  "private": true,
+  "main": "./out/main/index.js",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "start": "electron-vite preview",
+    "typecheck": "tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.web.json",
+    "test": "vitest run",
+    "smoke": "electron-vite build && electron . --smoke",
+    "dist": "electron-vite build && electron-builder --win nsis",
+    "dist:dir": "electron-vite build && electron-builder --win --dir"
+  },
+  "dependencies": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "sql.js": "^1.15.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/sql.js": "^1.4.11",
+    "@vitejs/plugin-react": "^6.1.2",
+    "electron": "^45.0.0",
+    "electron-builder": "^26.18.0",
+    "electron-vite": "^6.0.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5"
+  }
+}

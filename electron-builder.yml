@@ -1,0 +1,19 @@
+appId: com.jinny.todolist
+productName: TODOLIST
+directories:
+  output: release
+  buildResources: resources
+files:
+  - out/**/*
+  - resources/**/*
+  - package.json
+asarUnpack:
+  - node_modules/sql.js/dist/sql-wasm.wasm
+win:
+  target: nsis
+  icon: resources/icon.png
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  shortcutName: TODOLIST
